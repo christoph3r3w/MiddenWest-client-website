@@ -20,9 +20,10 @@ body {
     grid-column-gap: 10px;
     grid-row-gap: 10px;
     height:100vh;
-    background-image: url("/assets/9dc190180440397.650ad50e1039e.jpg");
+    background-image: url("/./assets/9dc190180440397.650ad50e1039e.jpg");
     background-position:center;
     background-size: cover;
+    /* opacity: 99%; */
     }
     header { 
         grid-area: 1 / 1 / 2 / 6;
