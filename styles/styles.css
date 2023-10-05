@@ -26,22 +26,33 @@ body {
     }
     header { 
         grid-area: 1 / 1 / 2 / 6;
-        
+        display: grid;
+
         position:relative;
         width: 100%;
-        background-color: rgba(214, 214, 255, 0.547);
-        background-blend-mode: color;
+        /* background-color: rgba(214, 214, 255, 0.547); */
+        background-blend-mode:darken;
         border-radius: 0px 0px 17px 17px;
         /* box-shadow: inset 0px -200px 20px 0px  rgba(214, 214, 255, 0.547) ; */
+        /* background-image: url(/assets/dakje-03.svg) ; */
+        background-repeat: no-repeat;
+        background-position:top;
+        background-size: 99%;
+        opacity: 100%;
+    }
+    header .dak{
+       
         
     }
+
     
      .logo{
         display:inline-flex;
         text-decoration: none;
         /* background-color: coral; */
-        margin:16px;
+        margin:2px;
         width:max-content;
+
         
      }
      .logo span, .section1 span{
@@ -121,17 +132,25 @@ body {
     .section2 { 
         grid-area: 3 / 1 / 7 / 2; 
         gap: 10px 10px;
-        outline: solid rgba(157, 157, 255, 0.384);
-        border-radius:0mm 130pc 8px 0px; 
+        /* outline: solid rgba(157, 157, 255, 0.384); */
         display: flex;
         flex-wrap: wrap;
         align-items: center;
         justify-content: center;
-        filter:grayscale(.6);
-        backdrop-filter: blur(10px);
-        box-shadow: inset 0px 0px 0px 0px coral ;
         font-size: 3rem;
         text-decoration: none;
+        color: black;
+        max-width: 30vw;
+        border-radius:0mm 130pc 8px 0px; 
+        backdrop-filter: blur(5px);
+        box-shadow: inset -5px 2px 70px 10px  #ffffff28,1px 1px 100px 1px rgba(149, 146, 142, 0.445) ;
+        border: 2px solid rgba(215, 237, 255, 0.423);
+
+        transition:  0.2s ease-in-out ;
+    }
+    .section2:hover{
+        box-shadow: inset 1px 1px 100px 1px rgba(29, 200, 120, 0.789);
+        
     }
     
     .section3 { 
@@ -142,9 +161,11 @@ body {
         background: transparent;
         backdrop-filter: blur(10px);
         box-shadow: inset -30px -30px 100px 0px  rgba(255, 166, 0, 0.064) ;
-        color:rgb(238, 226, 210);
+        color:rgb(70, 64, 64);
         padding: 10px;
-        outline: solid rgba(157, 157, 255, 0.384);
+        /* outline: solid rgba(157, 157, 255, 0.384); */
+        box-shadow: inset -5px 2px 70px 10px  #ffffff28,1px 1px 100px 10px hsla(240, 24%, 51%, 0.277) ;
+        border: 2px solid rgba(215, 237, 255, 0.423);
         /* align-items: center;
         justify-content: center; */
         /* filter:grayscale(); */
@@ -158,6 +179,7 @@ body {
         background-color: rgba(255, 179, 0, 0.614);
         backdrop-filter: blur(10px);
     }
+    
 
     @media (width > 390px) {
         body{
