@@ -19,7 +19,7 @@
                <a href="" class="logo">
                 <span class="spanone">.</span><span class="spantwo">w</span>
                </a> 
-               <>
+            
               <a href="index.html">go back button</a>
              <!-- <hr></hr> -->
             </nav>
@@ -30,33 +30,40 @@
             <article>
                 <h2>title of the option</h2>
                 <p> information of how many option and what this option intails </p>
-                
             </article>
         </section>
+        
         <!-- shuffeles between catagory -->
         <section class="div3"> 
-            <a href="#comu" class="option do" id="do">
+            <a href="#comu" class="option do" id="do" rel="no-refresh">
                 do something
             </a>
-            <a  href="#food" class="option community" id="comu">
+            <a  href="#food" class="option community" id="comu" rel="no-refresh">
                 community 
             </a>
-            <a  href="#other" class="option food" id="food">
+            <a  href="#other" class="option food" id="food" rel="no-refresh">
                 food
             </a>
-            <a  href="#choose" class="option other" id="other">
+            <a  href="#choose" class="option other" id="other" rel="no-refresh">
                 other
             </a>
-            <a  href="#do" class="choose" id="choose">
+            <a  href="#do" class="choose" id="choose" rel="no-refresh">
                 choose
             </a>
         </section>
         
+        
         <!-- gives you option to select market or initiaves -->
-        <section class="div4"> 
-            <a href="#"> market</a>
+        <section class="div4" data-hover-text="choose market for blah and initiativesfor more blah "> 
+            <!-- <a href="#"> market</a> -->
+            <label for="market" class="pink">
+                <input type="radio" name="pink-choice" id="market"> market
+            </label>
          <hr>
-            <a href="#">initiatives</a>
+            <!-- <a href="#">initiatives</a> -->
+            <label for="initiatives" class="pink">
+                <input type="radio" name="pink-choice" id="initiatives"> initiatives
+            </label>
             
         </section>
         
