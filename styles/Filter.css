@@ -22,10 +22,10 @@ body{
 
 
 
-body.bricks {
+.bricks {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1.1fr 1fr 5fr .1fr 1.4fr 4fr;
+    grid-template-rows: 1fr 1.1fr 1fr 5fr .1fr 1.3fr 4fr;
     gap: 20px;
     height:100vh;
     background-image: url("../assets/9dc190180440397.650ad50e1039e.jpg");
@@ -207,7 +207,7 @@ body.bricks {
           text-align: center; 
           margin:auto;
           text-decoration: none;
-          
+          cursor:pointer;
           
         }
         > .pink:nth-of-type(1){
@@ -217,14 +217,28 @@ body.bricks {
            border-radius: var(--br) 40px 40px var(--br) ;
         }
         .pink> input[type="radio"]{
-            /* appearance:none ; */
+            appearance:none ;
         }
     }
     
-    body:has(section:nth-child(4)>.pink:checked) .div5{
-        display: flex;
-        background-color: #228b22;
+    body:has(.pink input[type="radio"]#market:checked) {
+         /* .pink {background-color: #f07f7f;}     */
+        .div5{
+            display: flex;
+        }
     }
+    body:has(.pink input[type="radio"]#initiatives:checked) {
+               .div6{
+            display: grid;
+        }
+    }
+    body:has(.choose input[type="radio"]:checked) {
+               .div6{
+            display: grid;
+        }
+    }
+    
+    
 
     .div5 { 
        display: none;
@@ -258,11 +272,12 @@ body.bricks {
         
     }
     .div5 input[type="radio"]{
-        /* appearance:none; */
-        outline: solid pink;
+        appearance:none;
+        background-color: #e0ffff;
         width: 100%;
         height: 20px;
         z-index: -2;
+        cursor: pointer;
         
     }
 
@@ -276,7 +291,7 @@ body.bricks {
        
         outline: solid rgba(255, 166, 0, 0.445);
         border: 1.5px solid var(--cbd6);
-        display:grid;
+        display:none;
         align-items: center;
         justify-content: center;
         padding: 0;
