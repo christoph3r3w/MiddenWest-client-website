@@ -22,7 +22,7 @@
 •	Miro 
 •	Github desktop
 
-##bron
+## bron
 •	Coolers 
 •	Google fonts
 •	https://bennettfeely.com/
