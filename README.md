@@ -3,7 +3,7 @@
 # Midden West 
 <!-- Geef je project een titel en schrijf in één zin wat het is -->
 
-![Screenshot 2023-10-11 102919](https://github.com/christoph3r3w/MiddenWest-client-website/assets/144007933/1e0947d0-1254-4d7c-b72a-573a9d66da5b)
+![Screenshot 2023-10-11 102919](https://github.com/christoph3r3w/MiddenWest-client-website/assets/144007933/1e0947d0-1254-4d7c-b72a-573a9d66da5b).
 
 
 ## Inhoudsopgave
@@ -20,15 +20,21 @@
 
 ## Kenmerken
 •	Visual studio code
-•	Miro 
+
+•	Miro
+
 •	Github desktop
 
 ## bron
-•	Coolers 
-•	Google fonts
-•	https://bennettfeely.com/
-•	Mdm 
-•	Wayback machine
+•[	Coolers ](https://coolors.co/).
+
+•	[Google fonts](https://fonts.google.com/?classification=Display)
+
+•	[(https://bennettfeely.com/)](https://bennettfeely.com/clippy/)
+
+•	[Mdm ](https://developer.mozilla.org/en-US/docs/Web/CSS/:checked)
+
+•	[Wayback machine](https://archive.org/)
 
 
 
