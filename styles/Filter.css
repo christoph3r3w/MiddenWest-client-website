@@ -1,5 +1,9 @@
 *{
     box-sizing: border-box;
+    /* font-family: 'Bodoni Moda', serif; */
+    font-family: 'Genos', sans-serif;
+    /* font-family: 'Gluten', cursive; */
+    /* font-family: 'Nunito', sans-serif; */
 }
 :root{
     --cbd3: #e0ffff;
@@ -100,7 +104,7 @@ body{
         border: inset 1px solid rgba(215, 237, 255, 0.273);
         padding: 19px;
         background-color: rgba(187, 226, 213, 0.384);
-        font-size: ;
+       
         
     }
     .div3::before{

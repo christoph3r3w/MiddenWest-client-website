@@ -2,6 +2,11 @@
 
 margin:0;
 padding:0;
+/* font-family:"sacramento"; */
+/* font-family: 'Bodoni Moda', serif; */
+font-family: 'Genos', sans-serif;
+/* font-family: 'Gluten', cursive; */
+/* font-family: 'Nunito', sans-serif; */
 }
 
 :root{
@@ -53,6 +58,7 @@ body {
         /* clip-path: polygon(100% 0, 100% 100%, 79% 100%, 79% 80%, 61% 81%, 27% 57%, 0 76%, 0 0); */
         filter:drop-shadow( 10px 10px 10px 10px  black);
         
+        
     }
     header::after{
         content: "";
@@ -72,6 +78,8 @@ body {
         
      }
      .logo span, .section1 span{
+        
+        
         font-size: 5rem ;
         margin: 1px;
         /* width:max-content; */
@@ -228,6 +236,9 @@ body {
         justify-content: center; */
         /* filter:grayscale(); */
         
+    }
+    .section3 a{
+        color:red
     }
     
     footer { 
