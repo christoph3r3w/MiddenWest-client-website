@@ -9,7 +9,17 @@
     /* font-family: 'Nunito', sans-serif; */
     /* font-family: sans-serif; */
     /* font-family: 'Borel', cursive; */
+    /* font-family: "ouma-latin-variable",sans-serif; */
+    /* font-variation-settings: 'wght' 100; */
+    /* font-family: "gyst-variable",sans-serif; */
+    /* font-variation-settings: 'wght' 100; */
+    /* font-family: "acumin-pro", sans-serif; */
+    /* font-weight: 400; */
+    /* font-style: normal; */
+    /* font-family: "kepler-std-semicondensed-dis", serif; */
+      
 }
+
 
 :root{
     --beige:#F5E7E0;
@@ -18,7 +28,10 @@
     --blue2:#0300235c;
     --white:#fff7f7cf;
     --black:#1C1C1C;
-
+    /* button time */
+    --b-time:.2s;
+    /* global curve */
+    --g-c:1em
 }
 body{
     position: absolute;
@@ -86,7 +99,7 @@ body{
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  background-color: var(--beige);
+  background-color: var(--beige2);
   box-shadow: 3px 3px 4px rgba(0,0,0,0.1) inset,
   3px 3px 10px rgba(0,0,0,0.2) inset;
   border-radius: 10pc 0pc 0pc 0pc  ;
@@ -106,25 +119,28 @@ body{
 
 .filter{
     
-    border: solid red;
+    /* border: solid red; */
     top:0;
     bottom: 0;
-
+    
     &:nth-child(1){
         width: 30%;
+        border-radius: 5pc var(--g-c) var(--g-c) var(--g-c) ;
     }
     &:nth-child(2){
         width: 30%;
     }
     &:nth-child(3){
         flex-grow:1;
-        background-color: green;
+        /* outline: solid green; */
+        border: 1.5px solid rgba(255, 255, 255, 0.577);
+        border-radius: var(--g-c) var(--g-c) 0px var(--g-c) ;
     }
 }
 
 .options{
     /* background-color: #1C1C1C; */
-    border-radius: 5pc 0pc 0pc 0pc ;
+    
     border: 1.5px solid rgba(255, 255, 255, 0.577);
     display: grid;
     position: relative;
@@ -139,36 +155,45 @@ body{
     inset: .4em;
     display:grid;
     place-items: center;
+    
 }
 .option:is(#food,#do,#other,#comu,#choose):target{
     z-index: 1;
-    outline: solid ;
+    /* outline: solid ; */
+    border: 1.5px solid rgba(255, 255, 255, 0.577);
     display: grid;
-    border-radius: 5pc 0pc 0pc 0pc ;
+    border-radius: 5pc var(--g-c) var(--g-c) var(--g-c) ;
+    /* background-color: var(--white); */
     
 }
 
 .option#food:target{
-    color: yellow;
+    color: var(--black);
+    background-color: rgb(255, 255, 104);
     /* position:absolute; */
+    
 }
 .option#do:target{
-    color:green;   
+    color: var(--white);
+    background-color:rgb(42, 119, 42);   
 }
 .option#other:target{
-    color: rgba(237, 65, 13, 0.916);
+    color: var(--white);
+    background-color: rgba(237, 65, 13, 0.916);
 }
 
 .option#comu:target{
-    color: orange;   
+    color: var(--black);
+    background-color: orange;   
 }
 .option#choose:target{
-    color: blue;
+    color: var(--white);
+    background-color: var(--blue);
 }
-/#choose{
+#choose{
     color: blue;
-    display:block ;
-    z-index: 1;
+    /* display:block ; */
+    z-index:0;
     text-decoration: none;
     /* position:absolute; */
 }
@@ -216,10 +241,70 @@ body{
     
 } */
 
-article{
+.M-I{
+    display: flex;
+    flex-direction: column;
+    gap:.6em;
+
+    .pink{
+        /* outline: solid; */
+        flex-grow: 1;
+        margin: 0;
+        border-radius: var(--g-c) var(--g-c) .2em .2em ;
+        display: grid;
+        place-items: center;
+        border: 1.5px solid rgba(255, 255, 255, 0.577);
+        background-color: rgba(255, 127, 80, 0.233);
+        transition: var(--b-time) ease-in-out;
     
+    }
+    .pink:nth-of-type(2){
+        border-radius:  .2em .2em var(--g-c) var(--g-c) ;
+    }
+    .pink:nth-of-type(n):has(input[type="radio"]:checked){
+        background-color: #0D00A4;
+        height: 30%;
+        color: var(--white);
+        /* scale: 1.05; */
+    }
+
+    .pink> input[type="radio"]{
+        appearance:none ;
+        
+    }
+ 
     
-  
+}
+
+.choose{
+display: flex;
+padding: .5em;
+flex-wrap: wrap;
+overflow:hidden ;
+gap: .5em;
+> label{
+    /* outline: solid; */
+    border: 1.5px solid rgba(255, 255, 255, 0.577);
+    padding: calc(var(--g-c) - .3em);
+    min-width: 2em;
+    width: max-content;
+    border-radius: calc(var(--g-c) - .6em);
+    
+}
+
+}
+
+.optionTwo:nth-of-type(n):has(input[type="radio"]:checked){
+    background-color: #0D00A4;
+    height: 30%;
+    color: var(--white);
+    scale: 1.05;
+   
+}
+
+.optionTwo:nth-of-type(n):has(input[type="radio"])> input[type="radio"]{
+    appearance:none ;
+    
 }
     
 
