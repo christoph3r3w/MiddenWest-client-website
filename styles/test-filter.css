@@ -31,10 +31,13 @@
     /* button time */
     --b-time:.2s;
     /* global curve */
-    --g-c:1em
+    --g-c:1.5em;
+    /* minimal curve */
+    --m-c:4px;
+    --margin-s: 1rem;
 }
 body{
-    position: absolute;
+    position: relative;
     width: 100vw;
     height: 100vh;
     top: 0;
@@ -49,7 +52,7 @@ body{
     display:inline-flex;
     text-decoration: none;
     /* background-color: coral; */
-    margin:2px;
+    margin:var(--margin-s);
     height: 90px;
     font-family: 'Bodoni Moda', serif;
  }
@@ -102,10 +105,11 @@ body{
   background-color: var(--beige2);
   box-shadow: 3px 3px 4px rgba(0,0,0,0.1) inset,
   3px 3px 10px rgba(0,0,0,0.2) inset;
-  border-radius: 10pc 0pc 0pc 0pc  ;
+  border-radius: 10pc 0pc 0pc var(--m-c) ;
   
 }
 
+/* filters */
 .bar{
     grid-area: 1/2/1/4;
     display: flex;
@@ -134,7 +138,7 @@ body{
         flex-grow:1;
         /* outline: solid green; */
         border: 1.5px solid rgba(255, 255, 255, 0.577);
-        border-radius: var(--g-c) var(--g-c) 0px var(--g-c) ;
+        border-radius: var(--g-c) var(--g-c) var(--m-c) var(--g-c) ;
     }
 }
 
@@ -201,7 +205,7 @@ body{
 .glass{
     grid-area: 2/1/4/4;
     /* outline: solid forestgreen; */
-    border-radius: 10em 0em 0em 0em ;
+    border-radius: 10em var(--m-c) var(--m-c) var(--m-c);
     display:flex;
     border: 1.5px solid rgba(255, 255, 255, 0.57);
     border-bottom: 0px;
@@ -250,7 +254,7 @@ body{
         /* outline: solid; */
         flex-grow: 1;
         margin: 0;
-        border-radius: var(--g-c) var(--g-c) .2em .2em ;
+        border-radius: var(--g-c) var(--g-c) var(--m-c) var(--m-c) ;
         display: grid;
         place-items: center;
         border: 1.5px solid rgba(255, 255, 255, 0.577);
@@ -259,7 +263,7 @@ body{
     
     }
     .pink:nth-of-type(2){
-        border-radius:  .2em .2em var(--g-c) var(--g-c) ;
+        border-radius:  var(--m-c) var(--m-c) var(--g-c) var(--g-c) ;
     }
     .pink:nth-of-type(n):has(input[type="radio"]:checked){
         background-color: #0D00A4;
@@ -305,6 +309,69 @@ gap: .5em;
 .optionTwo:nth-of-type(n):has(input[type="radio"])> input[type="radio"]{
     appearance:none ;
     
+}
+
+/* side info panel  */
+.side-info{
+    /* outline: solid; */
+    position:absolute;
+    margin: 0;
+    bottom: 0;
+    top:14em;
+    display: block;
+    width:24.9vw ;
+    
+
+
+}
+
+.side-info > ul {
+    background-image: url(/assets/DALL·E\ 2023-10-15\ 19.08.40\ -\ only\ the\ wall.png);
+    background-color:#c7b79e;
+    background-blend-mode: lighten;
+    
+    
+    margin: var(--margin-s);
+    list-style: none;
+    display: grid;
+    gap:1em;
+    height:60vh ;
+    overflow-y: hidden ;
+    border-radius:var(--g-c) var(--g-c) ;
+    border: 1.1px solid rgba(255, 255, 255, 0.577);
+    backdrop-filter:blur(60px);
+    /* box-shadow: inset .5px .5px 60px .1px rgb(186, 183, 183); */
+}
+
+.side-info li {
+grid-area: 1/1;
+margin: calc(var(--margin-s) - 10px);
+border-radius:var(--g-c) var(--g-c) ;
+border: 1.5px solid rgba(255, 255, 255, 0.163);
+
+/* display: none; */
+backdrop-filter:blur(10px);
+padding: 8px;
+
+
+&:nth-child(1){
+    /* background-color: red; */
+    
+}
+&:nth-child(2){
+    /* background-color: green ; */
+}
+&:nth-child(3){
+    /* background-color: blue ; */
+
+}
+&:nth-child(4){
+    /* background-color: yellow ; */
+    z-index: 2;
+}
+&:nth-child(5){
+    /* background-color: orange ; */
+}
 }
     
 
