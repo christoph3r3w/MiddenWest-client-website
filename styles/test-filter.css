@@ -97,7 +97,7 @@ body{
   width: 75vw;
   
   /* background-image: url(/assets/9dc190180440397.650ad50e1039e.jpg) */
-  background-image: url(../assets/moring\ wall.png);
+  background-image: url(./assets/moring\ wall.png);
   row-gap: 1em;
   background-repeat: no-repeat;
   background-position: center;
