@@ -89,7 +89,7 @@ body{
   right: 0;
   width: 97vw;
   height: 105vh;
-  background-image: url(./assets/9dc190180440397.650ad50e1039e.jpg);
+  background-image: url(../assets/9dc190180440397.650ad50e1039e.jpg);
   
   background-repeat: no-repeat; 
   background-position: center;
@@ -144,7 +144,7 @@ body:has(.hallen:hover){
     }
 
     .background{
-        background-image: url(./assets\48027696262_62b3dd05f7_b.jpg);
+        background-image: url(../assets\48027696262_62b3dd05f7_b.jpg);
         
         
         background-repeat:no-repeat;
