@@ -11,7 +11,7 @@
     /* font-family: sans-serif; */
     /* font-family: 'Borel', cursive; */
     /* font-family:'Arial Narrow'; */
-  
+
 }
 
 
@@ -162,7 +162,8 @@ body:has(.hallen:hover){
         
     }
     .glass{
-        background-color:var(--hstgrey);
+        /* background-color:var(--hstgrey); */
+        background-color:#dfe4e594;
         transition: .5s ease-in-out 2s;
         .show p{
             display: none;
@@ -172,6 +173,24 @@ body:has(.hallen:hover){
     .glass::before{
         display: none;
         transition: .5s ease-in-out 2s;
+    }
+    .up,.down.west{
+        display: none;
+    }
+    .down.event{
+        display: flex;
+        position: absolute;
+        top: 30vh;
+        left: 0;
+        width:70cqw;
+        /* text-decoration: underline; */
+        border-bottom:solid ;
+        border-width: 2px;
+        /* text-shadow: 0px 0px 3px var(--white),
+               0px 0px 20px var(--white),
+              0px 0px 40px var(--white),
+              0px 0px 30px var(--white); */
+        
     }
     
 }
@@ -244,6 +263,7 @@ body:has(.show:hover) {
     }
 
     .glass::before{
+    
     /* background-color: var(--beige2); */
     filter: blur(1px);
     /* background-image: none; */
@@ -253,16 +273,14 @@ body:has(.show:hover) {
     right: 2.7rem;
     }
 
-    .down-info-mw{
-        
-    }
+    
     .down-info-mw :nth-child(n){
         display: block;
-        color: var(--black2);
+        color: black;
     }
     .down-info-hallen :nth-child(n){
         display: block;
-        color: var(--black2);
+        color: black;
         &:nth-child(1){
             transform: translateX(-40px) rotateX(1turn);
             transition: 2s ease 1.8s ;
@@ -327,13 +345,17 @@ article .down{
         filter: drop-shadow(30px 40px 4px var(--blue2));
         
         }
-        &>span{
-        /* color:var(--blue); */
-        /* outline: solid orange; */
-        
-        }   
-        
+                
     }
+    &.event{
+        display: none;
+        border-color:var(--hstblue);
+        .circle{
+            color: var(--hstblue);
+        }
+    }
+
+
 }
 
 article:has(.circle:hover) .down-info-mw :nth-child(2){
@@ -357,7 +379,7 @@ article:has(.circle:hover) .down-info-mw :nth-child(2){
     left: 12vw;
     font-size: x-large;
     font-family: 'Bodoni Moda',sans-serif;
-    font-weight: 500;
+    font-weight: 600;
     color: var(--blue);
 
     :nth-child(1){
@@ -378,6 +400,8 @@ article:has(.circle:hover) .down-info-mw :nth-child(2){
     bottom: 1vh;
     left: 0vw;
     font-size: x-large;
+    font-family: 'Bodoni Moda',sans-serif;
+    font-weight: 600;
 
     :nth-child(1){
         display: none;
@@ -388,6 +412,8 @@ article:has(.circle:hover) .down-info-mw :nth-child(2){
         
     }
 }
+
+
 
 
 article .show{
