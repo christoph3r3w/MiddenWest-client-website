@@ -102,7 +102,8 @@ header{
 header .back-btn {
     /* outline: solid red; */
     position: relative;
-    margin: var(--margin-s) 2em;
+    margin: var(--margin-s) 10dvw;
+    margin-top: 2rem ;
     display: grid;
     place-items: center;
     >svg{

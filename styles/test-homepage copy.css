@@ -228,7 +228,9 @@ body:has(.hallen:hover){
     
 } 
 
-body:has(.show:hover) .hidden-info{
+body:has(.show:hover) {
+
+    .hidden-info{
     grid-area: 2/-1/4/2;
     bottom: 0;
     right: 3rem;
@@ -238,9 +240,9 @@ body:has(.show:hover) .hidden-info{
     transition: 1s ease-in-out 1s;
     border-radius: 10em 10em 0em 0em;
     background-color: rgba(255, 166, 0, 0.714);
-}
+    }
 
-body:has(.show:hover) .glass::before{
+    .glass::before{
     /* background-color: var(--beige2); */
     filter: blur(1px);
     /* background-image: none; */
@@ -248,8 +250,24 @@ body:has(.show:hover) .glass::before{
     transition: all 1s ease .3s;
     border-radius: 15em 15em 0em 0em ;
     right: 2.7rem;
-}
+    }
 
+    .down-info-mw{
+        
+    }
+    .down-info-mw :nth-child(n){
+        display: block;
+        color: var(--black2);
+    }
+    .down-info-hallen :nth-child(n){
+        display: block;
+        color: var(--black2);
+        &:nth-child(1){
+            transform: translateX(-40px) rotateX(1turn);
+            transition: 2s ease 1.8s ;
+        }
+    }
+}
 article{
     z-index: 4; 
     /* outline: solid green; */
@@ -290,7 +308,7 @@ article .down{
     /* outline: solid orange; */
     flex-basis: 1;
     margin-bottom: 12rem;
-   
+    
     .circle{
     display: flex;
     flex-wrap: nowrap;
@@ -312,9 +330,64 @@ article .down{
         /* color:var(--blue); */
         /* outline: solid orange; */
         
-        }
-        }
+        }   
+        
+    }
 }
+
+article:has(.circle:hover) .down-info-mw :nth-child(2){
+    display: block;
+    text-shadow: 0px 0px 3px var(--beige),
+               0px 0px 20px var(--beige),
+              0px 0px 40px var(--beige),
+              0px 0px 30px var(--beige);
+    
+
+}
+
+.down-info-mw{
+    /* outline: solid red; */
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    width: fit-content;
+    place-items: center;
+    position: absolute;
+    bottom: 12vh;
+    left: 12vw;
+    font-size: x-large;
+    font-family: 'Bodoni Moda',sans-serif;
+    font-weight: 500;
+    color: var(--blue);
+
+    :nth-child(1){
+        display: none;
+        
+    }
+    :nth-child(2){
+        display: none;
+       
+    }
+}
+.down-info-hallen{
+    /* outline: solid green; */
+    display: flex;
+    place-content: center;
+    width: fit-content;
+    position: absolute;
+    bottom: 1vh;
+    left: 0vw;
+    font-size: x-large;
+
+    :nth-child(1){
+        display: none;
+       transform: translateX(-40px);
+    }
+    :nth-child(2){
+        display: none;
+        
+    }
+}
+
 
 article .show{
     /* outline: solid ; */
@@ -326,9 +399,13 @@ article .show{
     line-height: 2;
     width: 1.3em;
     text-align: center;
+    scale: .8;
     transition: .2s ease-out ;
     &:hover{
-        translate: 0px -10px;
+        translate: -9px -10px;
+    }
+    &:has(:hover) ::after{
+        content:'nfo' ;
     }
 }
  
