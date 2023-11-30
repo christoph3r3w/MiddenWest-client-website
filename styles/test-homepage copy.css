@@ -32,6 +32,18 @@
     --cbd42:#f07f7f;
     --cbd5:#228b22;
     --cbd6:#ffa500;
+
+    /* button time */
+    --b-time:.2s;
+    /* global curve */
+    --g-c:1.5em;
+    /* minimal curve */
+    --m-c:4px;
+    /* varriable gap */
+    --vg-n:1.4rem;
+    --vg-s:calc(var(--vg-n)/2);
+    
+    --margin-s: 1rem; 
 }
 
 body{
@@ -192,6 +204,10 @@ body:has(.hallen:hover){
               0px 0px 30px var(--white); */
         
     }
+    .down-info-hallen :nth-child(n){
+        display: inline;
+        left: 7rem;
+        }
     
 }
 
@@ -349,13 +365,13 @@ article .down{
     }
     &.event{
         display: none;
-        border-color:var(--hstblue);
+        
         .circle{
             color: var(--hstblue);
         }
     }
 
-
+    
 }
 
 article:has(.circle:hover) .down-info-mw :nth-child(2){
@@ -436,4 +452,94 @@ article .show{
     }
 }
  
+
+
+
+
+@media (width < 1540px){
+
+    body:has(.hallen:hover){
+        .down.event{ 
+        position: relative;
+        top: 20dvh;
+        display: flex ;
+
+            .circle{
+            font-size: 13rem;
+            line-height: .7;
+            }
+        }
+    }
+}
+
+@media (width < 1050px){
+   
+    body:has(.hallen:hover){
+        .down.event{ 
+        position: relative;
+        top: 35dvh;
+        display: flex ;
+
+            .circle{
+            font-size: 11rem;
+            line-height: .7;
+            }
+        }
+    }
+
+    body:has(.show:hover) {
+        .hidden-info{
+            height: 40%; 
+            border-radius: 5em 5em 0em 0em;
+            background-color:var(--beige);
+        }
+       
+    }
+
+
+    .background{
+     
+        .hallen{
+            position: absolute;
+            bottom: 0;
+            z-index: 3;
+            writing-mode: unset;
+            border-radius: 10rem 10rem 0px 0px ;
+            rotate: unset;
+            padding: var(--vg-n);
+
+            >span{
+                display: none;
+            }
+        }
+     
+        .glass{
+            /* background-color: #228b22; */
+            grid-area: 1/1/4/3;
+            border-radius: 15pc 0pc 0pc 0pc;
+        }
+
+        .down.west .circle{
+            
+            font-size: 14rem; 
+            padding-right: var(--vg-n);
+        }
+
+        .down-info-hallen{
+            left: 7rem;
+        }
+    }
+    article .show{
+        &:hover,:focus{
+            translate: 13px -10px;
+        }
+        &:has(:hover,:focus) ::after{
+            content:'' ;
+        }
+
+    }
+    
+}
+@media (width < 800px){}
+@media (width < 800px){}
 
