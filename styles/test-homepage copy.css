@@ -18,8 +18,8 @@
 :root{
     --beige:#F5E7E0;
     --beige2:#c7b79eac;
-    --blue:#0D00A4;
-    --blue2:#0300235c;
+    --primary:#0D00A4;
+    --primary2:#0300235c;
     --white:#fff7f7cf;
     --black2:#1C1C1C;
     --black:#1d160f;
@@ -45,6 +45,8 @@
     
     --margin-s: 1rem; 
 }
+
+
 
 body{
     position: absolute;
@@ -80,8 +82,8 @@ body{
  header span {
         background-clip: text;
         -webkit-background-clip: text;
-        -webkit-text-fill-color: var(--blue);
-        -webkit-text-stroke: 1px var(--blue);
+        -webkit-text-fill-color: var(--primary);
+        -webkit-text-stroke: 1px var(--primary);
         background-clip: transparent;
         z-index: 100;     
         color: transparent;
@@ -134,15 +136,15 @@ body{
     perspective: 100px; 
     color:var(--beige);
     font-weight: 500;
-    -webkit-text-stroke: .5px var(--blue2);
+    -webkit-text-stroke: .5px var(--primary2);
 
     padding-left: 20px;
     font-family: 'Bodoni Moda',sans-serif;
     box-shadow: inset .2px -1px 10px 1px rgba(245, 245, 220, 0.145);
     
     &:hover{
-        color:var(--blue);
-        filter: drop-shadow(-30px 4px 8px var(--blue2));
+        color:var(--primary);
+        filter: drop-shadow(-30px 4px 8px var(--primary2));
         /* transform:rotatey(1deg);
         transform-origin: bottom; */
     }
@@ -167,6 +169,7 @@ body:has(.hallen:hover){
         background-color: #d4e9db4a;
         transition: .8s ease-in-out var(--Tdelay);
     }
+
     .hallen{
         background-color: var(--hstgrey);
         color: var(--black2);
@@ -182,10 +185,12 @@ body:has(.hallen:hover){
             transition: 1s ease-in-out 1s;
         }
     }
+
     .glass::before{
         display: none;
         transition: .5s ease-in-out 2s;
     }
+    
     .up,.down.west{
         display: none;
     }
@@ -198,15 +203,17 @@ body:has(.hallen:hover){
         /* text-decoration: underline; */
         border-bottom:solid ;
         border-width: 2px;
-        /* text-shadow: 0px 0px 3px var(--white),
+         text-shadow: 0px 0px 3px var(--white), 
                0px 0px 20px var(--white),
-              0px 0px 40px var(--white),
-              0px 0px 30px var(--white); */
+              0px 0px 40px var(--white);
+              
+        outline: solid orange;
         
     }
     .down-info-hallen :nth-child(n){
         display: inline;
         left: 7rem;
+        
         }
     
 }
@@ -237,7 +244,7 @@ body:has(.hallen:hover){
     filter: blur(5px);
     opacity: 100%;
     border-radius: 15em 15em 0em 0em ;
-    border: 3px solid var(--blue2);
+    border: 3px solid var(--primary2);
     z-index: 0;
 
       
@@ -251,7 +258,7 @@ body:has(.hallen:hover){
     grid-area: 2/2/4/2;
     /* outline: solid rgba(255, 166, 0, 0.566); */
     background-color: #d47c2e;
-    background-color: var(--blue2);
+    background-color: var(--primary2);
     position: absolute;
     width:9vw ;
     height: 20%;
@@ -332,6 +339,7 @@ article .up{
         width: max-content;
         font-size: 4rem;
         font-family: 'Bodoni Moda',sans-serif;
+        /* font-family: 'Author-Variable'; */
         color: var(--black);
         bottom: 0;
         left: 2em;
@@ -353,12 +361,13 @@ article .down{
     text-decoration: none;
     color: var(--black);
     font-family:"sacramento";
+    /* font-family: 'Author-Variable'; */
     transition: .5s ease-out .1s;
     z-index: 100;
         &.circle:hover{
-        color: var(--blue);
+        color: var(--primary);
         translate: 0px -10px;
-        filter: drop-shadow(30px 40px 4px var(--blue2));
+        filter: drop-shadow(30px 40px 4px var(--primary2));
         
         }
                 
@@ -396,7 +405,7 @@ article:has(.circle:hover) .down-info-mw :nth-child(2){
     font-size: x-large;
     font-family: 'Bodoni Moda',sans-serif;
     font-weight: 600;
-    color: var(--blue);
+    color: var(--primary);
 
     :nth-child(1){
         display: none;
@@ -407,6 +416,7 @@ article:has(.circle:hover) .down-info-mw :nth-child(2){
        
     }
 }
+
 .down-info-hallen{
     /* outline: solid green; */
     display: flex;
@@ -490,10 +500,12 @@ article .show{
     body:has(.show:hover) {
         .hidden-info{
             height: 40%; 
-            border-radius: 5em 5em 0em 0em;
+            border-radius: 2em 2em 0em 0em;
+            
             background-color:var(--beige);
         }
-       
+        
+
     }
 
 
@@ -503,10 +515,18 @@ article .show{
             position: absolute;
             bottom: 0;
             z-index: 3;
+            height: 20dvh;
+            width: 7rem;
             writing-mode: unset;
             border-radius: 10rem 10rem 0px 0px ;
             rotate: unset;
             padding: var(--vg-n);
+            right: 21vw;
+            box-shadow: unset;
+            color: black;
+            font-family:"sacramento";
+            /* text-transform: capitalize; */
+            font-weight: 400;
 
             >span{
                 display: none;
@@ -520,13 +540,18 @@ article .show{
         }
 
         .down.west .circle{
-            
             font-size: 14rem; 
+            font-weight: 400;
             padding-right: var(--vg-n);
         }
 
         .down-info-hallen{
             left: 7rem;
+            
+            >svg{
+                rotate: 180deg;
+                translate:18rem .5rem;
+            }
         }
     }
     article .show{
@@ -541,5 +566,5 @@ article .show{
     
 }
 @media (width < 800px){}
-@media (width < 800px){}
+
 
